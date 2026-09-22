@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+
+    background:
+        radial-gradient(circle at top left, #ff9a9e, transparent 35%),
+        radial-gradient(circle at bottom right, #fad0c4, transparent 35%),
+        linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 35px 18px 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: clamp(45px, 12vw, 80px);
+    line-height: 1;
+    margin-bottom: 15px;
+    animation: glow 2s infinite alternate;
+}
+
+.subtitle {
+    font-size: clamp(21px, 6vw, 32px);
+    margin-bottom: 30px;
+}
+
+.birthday-icon {
+    font-size: 90px;
+    animation: bounce 1.5s infinite;
+    margin: 20px 0;
+}
+
+.countdown-box {
+    padding: 22px 15px;
+    margin: 25px auto;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.countdown-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+#countdown {
+    font-size: clamp(25px, 8vw, 45px);
+    font-weight: bold;
+}
+
+.message {
+    margin-top: 30px;
+    padding: 28px 20px;
+
+    border-radius: 25px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.message h2 {
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+.message p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+button {
+    border: none;
+    margin-top: 30px;
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    background: white;
+    color: #ff416c;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+#surprise {
+    display: none;
+
+    margin-top: 25px;
+    padding: 28px 20px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(12px);
+
+    animation: pop 0.6s ease;
+}
+
+#surprise h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+#surprise p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+
+    pointer-events: none;
+
+    animation: floatUp linear forwards;
+
+    z-index: 1;
+}
+
+.sparkle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+
+    animation: sparkle 1.3s linear forwards;
+}
+
+footer {
+    margin-top: 45px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255,255,255,0.4);
+    }
+
+    to {
+        text-shadow: 0 0 35px rgba(255,255,255,1);
+    }
+}
+
+@keyframes bounce {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatUp {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkle {
+
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 25px 14px 50px;
+    }
+
+    .birthday-icon {
+        font-size: 75px;
+    }
+
+    .message {
+        padding: 23px 16px;
+    }
+
+    .message p,
+    #surprise p {
+        font-size: 16px;
+    }
+
+    button {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="badge">
+        🎀 A Special Day For Someone Special 🎀
+    </div>
+
+    <h1>Happy Birthday</h1>
+
+    <div class="subtitle">
+        My Love ❤️
+    </div>
+
+    <div class="birthday-icon">
+        🎂
+    </div>
+
+
+    <!-- COUNTDOWN -->
+
+    <div class="countdown-box">
+
+        <div class="countdown-title">
+            🎉 Counting Down To Your Birthday
+        </div>
+
+        <div id="countdown">
+            Loading...
+        </div>
+
+    </div>
+
+
+    <!-- MESSAGE -->
+
+    <div class="message">
+
+        <h2>To The Most Special Person ❤️</h2>
+
+        <p>
+            Happy Birthday, my love. ❤️
+            You are one of the most beautiful parts of my life.
+
+            <br><br>
+
+            Thank you for bringing happiness,
+            love and beautiful memories into my world.
+
+            <br><br>
+
+            I may not always have the perfect words,
+            but my heart will always choose you.
+
+            <br><br>
+
+            I hope this birthday brings you
+            endless happiness, beautiful moments
+            and everything your heart wishes for.
+
+            <br><br>
+
+            Keep smiling, keep shining,
+            and always remember how special you are to me. ❤️
+        </p>
+
+    </div>
+
+
+    <!-- SURPRISE -->
+
+    <button onclick="showSurprise()">
+        🎁 Open Your Surprise
+    </button>
+
+
+    <div id="surprise">
+
+        <h2>💖 Surprise! 💖</h2>
+
+        <p>
+            You are not just another person in my life...
+
+            <br><br>
+
+            You are someone who makes my world
+            brighter just by being there. ❤️
+
+            <br><br>
+
+            I hope we keep creating beautiful
+            memories together.
+
+            <br><br>
+
+            Happy Birthday once again! 🎂🎉❤️
+        </p>
+
+    </div>
+
+
+    <footer>
+        Made with ❤️ specially for you
+    </footer>
+
+</div>
+
+
+<script>
+
+/* =========================
+   COUNTDOWN TO 24 SEPTEMBER
+========================= */
+
+function updateCountdown() {
+
+    const now = new Date();
+
+    let year = now.getFullYear();
+
+    let birthday = new Date(
+        year,
+        8,
+        24,
+        0,
+        0,
+        0
+    );
+
+    if (now > birthday) {
+
+        birthday = new Date(
+            year + 1,
+            8,
+            24,
+            0,
+            0,
+            0
+        );
+    }
+
+    const difference = birthday - now;
+
+    const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+    );
+
+    const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+    );
+
+    const seconds = Math.floor(
+        (difference / 1000) % 60
+    );
+
+    document.getElementById("countdown").innerHTML =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+setInterval(updateCountdown, 1000);
+
+updateCountdown();
+
+
+/* =========================
+   SURPRISE BUTTON
+========================= */
+
+function showSurprise() {
+
+    document.getElementById("surprise").style.display =
+        "block";
+
+    launchConfetti();
+
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function launchConfetti() {
+
+    for (let i = 0; i < 200; i++) {
+
+        const confetti =
+            document.createElement("div");
+
+        confetti.style.position = "fixed";
+
+        confetti.style.width = "8px";
+
+        confetti.style.height = "14px";
+
+        confetti.style.left =
+            Math.random() * 100 + "vw";
+
+        confetti.style.top = "-20px";
+
+        confetti.style.background =
+            `hsl(${Math.random() * 360},100%,60%)`;
+
+        confetti.style.zIndex = "9999";
+
+        confetti.style.pointerEvents = "none";
+
+        confetti.style.borderRadius = "2px";
+
+        document.body.appendChild(confetti);
+
+
+        const duration =
+            2000 + Math.random() * 3000;
+
+
+        confetti.animate(
+
+            [
+                {
+                    transform:
+                        "translateY(0) rotate(0deg)"
+                },
+
+                {
+                    transform:
+                        "translateY(110vh) rotate(720deg)"
+                }
+            ],
+
+            {
+                duration: duration,
+                easing: "cubic-bezier(.2,.8,.3,1)"
+            }
+
+        );
+
+
+        setTimeout(() => {
+            confetti.remove();
+        }, duration);
+
+    }
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = [
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "💓",
+        "💘"
+    ];
+
+    heart.innerHTML =
+        hearts[
+            Math.floor(
+                Math.random() * hearts.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        4 + Math.random() * 5 + "s";
+
+    heart.style.fontSize =
+        15 + Math.random() * 25 + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 9000);
+}
+
+setInterval(createHeart, 600);
+
+
+/* =========================
+   CLICK SPARKLES
+========================= */
+
+document.addEventListener(
+    "click",
+    function(e) {
+
+        for (let i = 0; i < 8; i++) {
+
+            const sparkle =
+                document.createElement("div");
+
+            sparkle.className = "sparkle";
+
+            sparkle.innerHTML = "✨";
+
+            sparkle.style.left =
+                e.clientX +
+                (Math.random() * 50 - 25) +
+                "px";
+
+            sparkle.style.top =
+                e.clientY +
+                (Math.random() * 50 - 25) +
+                "px";
+
+            document.body.appendChild(sparkle);
+
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1300);
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
+
